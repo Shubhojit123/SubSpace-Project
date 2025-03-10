@@ -1,0 +1,58 @@
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .welcomeText {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .categoryContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .categoryContainer button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background: lightgray;
+  }
+  
+  .categoryContainer button:hover {
+    background: gray;
+    color: white;
+  }
+  
+  .activeCategory {
+    background: blue !important;
+    color: white !important;
+  }
+  
+  .newsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .newsCard {
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid lightgray;
+    width: 300px;
+  }
+  
+  .positive {
+    border-left-color: green;
+  }
+  
+  .neutral {
+    border-left-color: yellow;
+  }
+  
+  .negative {
+    border-left-color: red;
+  }
+  
