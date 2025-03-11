@@ -1,57 +1,188 @@
 .title {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
 }
 
 .welcomeText {
   font-size: 18px;
+  font-weight: 500;
   margin-bottom: 20px;
+  color: #555;
 }
 
 .categoryContainer {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 .categoryContainer button {
-  padding: 8px 12px;
+  padding: 12px 18px;
   border: none;
   cursor: pointer;
-  background: lightgray;
-}
-
-.categoryContainer button:hover {
-  background: gray;
+  background: #007bff; /* Default Blue */
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
   color: white;
 }
 
-.activeCategory {
-  background: blue !important;
+.categoryContainer button:hover {
+  background: #0056b3; /* Darker Blue on Hover */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Locked active state */
+.categoryContainer .activeCategory {
+  background: #003d82 !important; /* Dark Blue for Selected */
   color: white !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  transform: scale(1.08);
+}
+
+/* When active, hover won't change color */
+.categoryContainer .activeCategory:hover {
+  background: #003d82 !important;
+  transform: scale(1.08);
+}
+
+.categoryContainer button:active {
+  transform: scale(0.95);
 }
 
 .newsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
+  justify-content: center;
 }
 
 .newsCard {
-  padding: 15px;
-  border-radius: 5px;
-  border-left: 5px solid lightgray;
-  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid lightgray;
+  width: 320px;
+  background: #fff;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.newsCard:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.newsImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.newsCard h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.newsCard p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.sentimentText {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.positive .sentimentText {
+  color: #0f5132;
+  background: #d1e7dd;
 }
 
 .positive {
-  border-left-color: green;
+  border-left: 6px solid #0f5132;
+  background: #e9f7ef;
+}
+
+.neutral .sentimentText {
+  color: #6c757d;
+  background: #e2e3e5;
 }
 
 .neutral {
-  border-left-color: yellow;
+  border-left: 6px solid #6c757d;
+  background: #f8f9fa;
+}
+
+.negative .sentimentText {
+  color: #842029;
+  background: #f8d7da;
 }
 
 .negative {
-  border-left-color: red;
+  border-left: 6px solid #842029;
+  background: #fde2e4;
+}
+
+/* Lock buttons to blue */
+.newsCard button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #007bff; /* Always blue */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.newsCard button:hover {
+  background: #007bff; /* Keep blue on hover */
+  transform: scale(1.08);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.newsCard button:active {
+  transform: scale(0.95);
+}
+
+/* Keep Read More button in blue */
+.readMore {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff; /* Always blue */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  text-align: center; 
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.readMore:hover {
+  color: #ff4500;
+  text-decoration: underline;
 }
